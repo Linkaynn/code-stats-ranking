@@ -1,0 +1,29 @@
+@import "variables";
+
+.brand-color {
+  color: $brand-color !important;
+}
+
+.border-brand-color {
+  border-color: $brand-color !important;
+}
+
+.brand-color-light {
+  color: $brand-color-light !important;
+}
+
+.brand-color-super-light {
+  color: $brand-color-super-light !important;
+}
+
+.orange {
+  color: $orange;
+}
+
+.white {
+  color: white !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
