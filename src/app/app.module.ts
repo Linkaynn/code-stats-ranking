@@ -11,12 +11,14 @@ import {HomeComponent} from './components/dashboard/home/home.component';
 import {appRoutes} from './app.routes';
 import {RouterModule} from '@angular/router';
 import {MatButtonModule, MatExpansionModule, MatSliderModule, MatSlideToggleModule} from '@angular/material';
+import {TopNavComponent} from './components/shared/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HomeComponent,
+    TopNavComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
