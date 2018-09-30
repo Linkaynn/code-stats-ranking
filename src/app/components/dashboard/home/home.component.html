@@ -1,0 +1,22 @@
+<div class="container">
+  <table mat-table [dataSource]="codeStaters" class="w-100">
+
+    <ng-container matColumnDef="user">
+      <th mat-header-cell *matHeaderCellDef> Username </th>
+      <td mat-cell *matCellDef="let codeStater"> {{codeStater.user}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalXP">
+      <th mat-header-cell *matHeaderCellDef> Total XP </th>
+      <td mat-cell *matCellDef="let codeStater"> {{codeStater.totalXP}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+
+<pre>
+  {{codeStaters | json}}
+</pre>
