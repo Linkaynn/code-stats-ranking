@@ -1,6 +1,6 @@
 export default {
-  "names": [
-    "Linkaynn",
-    "skurt23"
+  'names': [
+    'Linkaynn',
+    'skurt23'
   ]
-}
+};

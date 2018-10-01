@@ -1,7 +1,7 @@
-import {DashboardComponent} from "./components/dashboard/dashboard.component";
-import {HomeComponent} from "./components/dashboard/home/home.component";
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {HomeComponent} from './components/dashboard/home/home.component';
 
-export const HOME_PATH = {path: "home", component: HomeComponent};
+export const HOME_PATH = {path: 'home', component: HomeComponent};
 
 export const DASHBOARD_PATH = {
   path: 'dashboard',

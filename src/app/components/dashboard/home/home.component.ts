@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 import {CodeStatersService} from '../../../helpers/code-staters.service';
 import {CodeStater} from '../../../model/CodeStater';
 import codeStatersJSON from '../../../../assets/code-staters-data';

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import {environment} from '../environments/environment';
 })
 export class AppComponent {
 
-  version : string = "v 0.0.1";
+  version: string = 'v 0.0.2';
 
   constructor() {
   }

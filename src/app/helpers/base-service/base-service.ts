@@ -1,8 +1,8 @@
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Injectable} from "@angular/core";
-import 'rxjs/add/operator/map'
-import {ServicesCore} from "./service-core-provider";
-import {environment} from "../../../environments/environment";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import 'rxjs/add/operator/map';
+import {ServicesCore} from './service-core-provider';
+import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class BaseService {
@@ -49,15 +49,15 @@ export class BaseService {
   }
 
   protected getFile(endpoint) {
-    return this.http.get(BaseService.BASE_URL + this.insertSlashIfNeeded(endpoint) + endpoint, {responseType: 'blob'}).toPromise()
+    return this.http.get(BaseService.BASE_URL + this.insertSlashIfNeeded(endpoint) + endpoint, {responseType: 'blob'}).toPromise();
   }
 
   private insertSlashIfNeeded(endpoint) {
-    return (endpoint.charAt(0) == '/' ? "" : "/");
+    return (endpoint.charAt(0) == '/' ? '' : '/');
   }
 
   private buildQueryParam(params: [any]) {
-    let queryParams = "?";
+    let queryParams = '?';
 
     if (params) {
       for (let i = 0; i < params.length; i++) {
@@ -69,16 +69,16 @@ export class BaseService {
         // We get the key name to put it as string
         let key = Object.keys(param)[0];
 
-        queryParams += key + "=" + param[key];
+        queryParams += key + '=' + param[key];
 
         if (i != params.length - 1) {
-          queryParams += "&"
+          queryParams += '&';
         }
       }
     }
 
     // If all params are empty, we send empty string
-    if (queryParams == "?" || !queryParams) queryParams = "";
+    if (queryParams == '?' || !queryParams) queryParams = '';
 
     return queryParams;
   }

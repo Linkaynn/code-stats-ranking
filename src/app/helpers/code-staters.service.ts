@@ -11,7 +11,7 @@ export class CodeStatersService extends BaseService {
   }
 
   getCodeStater(username: string) {
-    return this.get(username, null, CodeStater.fromJSON)
+    return this.get(username, null, CodeStater.fromJSON);
   }
 
 }
