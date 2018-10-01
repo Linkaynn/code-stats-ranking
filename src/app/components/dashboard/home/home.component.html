@@ -14,7 +14,9 @@
 
       <ng-container matColumnDef="average">
         <th class="text-center" mat-header-cell *matHeaderCellDef> Average per day</th>
-        <td class="text-center" mat-cell *matCellDef="let codeStater"> {{codeStater.averageExpPerDay().toFixed(2)}} exp.</td>
+        <td class="text-center" mat-cell *matCellDef="let codeStater"> {{codeStater.averageExpPerDay().toFixed(2)}}
+          exp.
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="expandedDetail">
@@ -50,8 +52,8 @@
 </div>
 
 
-<div *ngIf="!inProduction()">
-  <pre>
-  {{codeStaters | json}}
-</pre>
-</div>
+<!--<div *ngIf="!inProduction()">-->
+  <!--<pre>-->
+  <!--{{codeStaters | json}}-->
+  <!--</pre>-->
+<!--</div>-->

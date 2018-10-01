@@ -1,2 +1,8 @@
 @import "../sass/vendor/variables";
 @import "../sass/vendor/util";
+
+.footer {
+  height: 30px;
+  border-top: 3px solid $brand-color-super-light;
+  background-color: $brand-color-super-light;
+}
