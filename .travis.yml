@@ -24,4 +24,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/code-stats-ranking
   on:
-    branch: gh-pages
+    branch: master
