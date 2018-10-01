@@ -10,18 +10,9 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {HomeComponent} from './components/dashboard/home/home.component';
 import {appRoutes} from './app.routes';
 import {RouterModule} from '@angular/router';
-import {
-  MatButtonModule,
-  MatExpansionModule,
-  MatHeaderCell,
-  MatHeaderRowDef,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatTableModule
-} from '@angular/material';
+import {MatButtonModule, MatExpansionModule, MatSliderModule, MatSlideToggleModule, MatTableModule} from '@angular/material';
 import {TopNavComponent} from './components/shared/top-nav/top-nav.component';
 import {CodeStatersService} from './helpers/code-staters.service';
-import {CdkTableModule} from '@angular/cdk/table';
 
 @NgModule({
   declarations: [

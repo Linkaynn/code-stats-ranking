@@ -1,22 +1,57 @@
 <div class="container">
-  <table mat-table [dataSource]="codeStaters" class="w-100">
+  <div class="table-container mt-2 pb-2 pl-2 pr-2">
+    <table mat-table [dataSource]="codeStaters" multiTemplateDataRows class="w-100">
 
-    <ng-container matColumnDef="user">
-      <th mat-header-cell *matHeaderCellDef> Username </th>
-      <td mat-cell *matCellDef="let codeStater"> {{codeStater.user}}</td>
-    </ng-container>
+      <ng-container matColumnDef="user">
+        <th class="text-center" mat-header-cell *matHeaderCellDef> Username</th>
+        <td class="text-center" mat-cell *matCellDef="let codeStater"> {{codeStater.user}}</td>
+      </ng-container>
 
-    <ng-container matColumnDef="totalXP">
-      <th mat-header-cell *matHeaderCellDef> Total XP </th>
-      <td mat-cell *matCellDef="let codeStater"> {{codeStater.totalXP}}</td>
-    </ng-container>
+      <ng-container matColumnDef="totalXP">
+        <th class="text-center" mat-header-cell *matHeaderCellDef> Total</th>
+        <td class="text-center" mat-cell *matCellDef="let codeStater"> {{codeStater.totalExperience}} exp.</td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+      <ng-container matColumnDef="average">
+        <th class="text-center" mat-header-cell *matHeaderCellDef> Average per day</th>
+        <td class="text-center" mat-cell *matCellDef="let codeStater"> {{codeStater.averageExpPerDay().toFixed(2)}} exp.</td>
+      </ng-container>
+
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let codeStater" [attr.colspan]="displayedColumns.length">
+          <div class="example-codestater-detail"
+               [@detailExpand]="expandedCodeStaters.includes(codeStater) ? 'expanded' : 'collapsed'">
+            <div class="w-100 mt-2 mb-2">
+              <div class="row">
+                <div class="col-4">
+                  <p class="pb-0 mb-0 bold">Experience in the last 12 hours</p>
+                  <span>{{codeStater.newExperience}} points</span>
+                </div>
+                <div class="col-6">
+                  <p class="pb-0 mb-0 bold">Best language</p>
+                  <span>{{codeStater.bestLanguage().name}} is the {{((codeStater.bestLanguage().totalExperience / codeStater.totalExperience)  * 100).toFixed(2)}}% of him/her experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let codeStater; columns: displayedColumns;"
+          class="example-codeStater-row"
+          [class.example-expanded-row]="expandedCodeStaters.includes(codeStater)"
+          (click)="rowClick(codeStater)">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+    </table>
+  </div>
 </div>
 
 
-<pre>
+<div *ngIf="!inProduction()">
+  <pre>
   {{codeStaters | json}}
 </pre>
+</div>

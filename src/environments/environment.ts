@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  base_url: "http://codestats.net/api/users/"
+  base_url: "http://codestats.net/api/users"
 };
 
 /*

@@ -10,10 +10,6 @@ export class CodeStatersService extends BaseService {
     super(core);
   }
 
-  getData() {
-    return this.http.get("../../assets/codestaters.json").toPromise();
-  }
-
   getCodeStater(username: string) {
     return this.get(username, null, CodeStater.fromJSON)
   }

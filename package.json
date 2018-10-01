@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --watch",
-    "build": "ng build --prod --base-href 'https://linkaynn.github.io/code-stats-ranking/' && ngh",
+    "build": "ng build --prod --base-href 'http://www.jeseromero.com/code-stats-ranking/'",
+    "deploy": "npx ngh --dir=dist/code-stats-ranking -S",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,7 +21,7 @@
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
     "@angular/material": "^6.4.7",
-    "@angular/platform-browser": "^6.1.0",
+    "@angular/platform-browser": "^6.1.9",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "bootstrap": "^4.1.3",
