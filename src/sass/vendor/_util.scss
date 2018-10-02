@@ -20,6 +20,18 @@
   color: $orange;
 }
 
+.orange-dark {
+  color: $orange-dark;
+}
+
+.violet {
+  color: $violet;
+}
+
+.violet-dark {
+  color: $violet-dark;
+}
+
 .white {
   color: white !important;
 }
@@ -30,4 +42,12 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.cursor-default {
+  cursor: auto;
+}
+
+.black {
+  color: rgba(0,0,0,.87)
 }

@@ -7,18 +7,27 @@ import {ServicesCore} from './helpers/base-service/service-core-provider';
 import {BaseService} from './helpers/base-service/base-service';
 import {HttpClientModule} from '@angular/common/http';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
-import {HomeComponent} from './components/dashboard/home/home.component';
+import {CodeStatersComponent} from './components/dashboard/code-staters/code-staters.component';
 import {appRoutes} from './app.routes';
 import {RouterModule} from '@angular/router';
-import {MatButtonModule, MatExpansionModule, MatSliderModule, MatSlideToggleModule, MatTableModule} from '@angular/material';
+import {
+  MAT_SNACK_BAR_DEFAULT_OPTIONS,
+  MatButtonModule,
+  MatExpansionModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatTableModule
+} from '@angular/material';
 import {TopNavComponent} from './components/shared/top-nav/top-nav.component';
 import {CodeStatersService} from './helpers/code-staters.service';
+import {ComponentsCore} from './helpers/base-component/service-core-provider';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HomeComponent,
+    CodeStatersComponent,
     TopNavComponent
   ],
   imports: [
@@ -30,11 +39,14 @@ import {CodeStatersService} from './helpers/code-staters.service';
     MatSlideToggleModule,
     MatExpansionModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}},
     ServicesCore,
     BaseService,
+    ComponentsCore,
     CodeStatersService
   ],
   bootstrap: [AppComponent]

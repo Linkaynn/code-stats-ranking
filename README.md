@@ -8,5 +8,5 @@ After that travis will be deploy your data in the Github Pages and you will see 
 ## To-do
 * More *ad-hoc* statistics in the table and it expansion.
 * Some beautiful graphics.
-* Add link to personal pages and real names to ``assets/code-staters-data.ts`` in order to credit the user.
-* Maybe add a description to every one in ``assets/code-staters-data.ts`` to make a personal description. 
+* ~~Add link to personal pages and real names to ``assets/code-staters-data.ts`` in order to credit the user.~~
+* ~~Maybe add a description to every one in ``assets/code-staters-data.ts`` to make a personal description.~~ 

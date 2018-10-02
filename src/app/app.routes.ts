@@ -1,7 +1,7 @@
 import {DashboardComponent} from './components/dashboard/dashboard.component';
-import {HomeComponent} from './components/dashboard/home/home.component';
+import {CodeStatersComponent} from './components/dashboard/code-staters/code-staters.component';
 
-export const HOME_PATH = {path: 'home', component: HomeComponent};
+export const HOME_PATH = {path: 'code-staters', component: CodeStatersComponent};
 
 export const DASHBOARD_PATH = {
   path: 'dashboard',
@@ -9,12 +9,12 @@ export const DASHBOARD_PATH = {
   children: [HOME_PATH,
     {
       path: '**',
-      redirectTo: '/dashboard/home',
+      redirectTo: '/dashboard/code-staters',
       pathMatch: 'full'
     }
   ]
 };
 
-const DEFAULT = {path: '**', redirectTo: '/dashboard/home', pathMatch: 'full'};
+const DEFAULT = {path: '**', redirectTo: '/dashboard/code-staters', pathMatch: 'full'};
 
 export const appRoutes = [DASHBOARD_PATH, DEFAULT];

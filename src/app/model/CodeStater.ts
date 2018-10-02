@@ -17,23 +17,32 @@ export class Language {
 export class CodeStater {
 
   user: string;
+  name: string;
+  email: string;
+  personalPage: string;
+  description: string;
   newExperience: number = 0;
   totalExperience: number = 0;
   languages: Language[] = [];
   experiencePerDay: { date: string, exp: number }[] = [];
 
-  static fromJSON(json) {
-    let codeStaters = new CodeStater();
+  static fromJSON(json, moreData) {
+    let codeStater = new CodeStater();
 
-    codeStaters.user = json.user;
-    codeStaters.totalExperience = json.total_xp;
-    codeStaters.newExperience = json.new_xp ? json.new_xp : '0';
+    codeStater.user = json.user;
+    codeStater.name = moreData.name;
+    codeStater.email = moreData.email;
+    codeStater.personalPage = moreData.personal_page;
+    codeStater.description = moreData.description;
+
+    codeStater.totalExperience = json.total_xp;
+    codeStater.newExperience = json.new_xp ? json.new_xp : '0';
 
     let dates = Object.keys(json.dates);
 
     if (dates.length) {
       for (const date of dates) {
-        codeStaters.experiencePerDay.push({date: date, exp: json.dates[date]});
+        codeStater.experiencePerDay.push({date: date, exp: json.dates[date]});
       }
     }
 
@@ -44,11 +53,11 @@ export class CodeStater {
         let language = json.languages[languageID];
         language.name = languageID;
 
-        codeStaters.languages.push(Language.fromJSON(language));
+        codeStater.languages.push(Language.fromJSON(language));
       }
     }
 
-    return codeStaters;
+    return codeStater;
   }
 
   averageExpPerDay() {

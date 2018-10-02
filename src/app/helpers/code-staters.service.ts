@@ -10,8 +10,10 @@ export class CodeStatersService extends BaseService {
     super(core);
   }
 
-  getCodeStater(username: string) {
-    return this.get(username, null, CodeStater.fromJSON);
+  getCodeStater(codeStater) {
+    return this.get(codeStater.username, null, (res) => {
+      return CodeStater.fromJSON(res, codeStater);
+    });
   }
 
 }
