@@ -4,7 +4,7 @@ export class Language {
   newExperience: number = 0;
 
   static fromJSON(json) {
-    let language = new Language();
+    const language = new Language();
 
     language.name = json.name;
     language.totalExperience = json.xps;
@@ -27,7 +27,7 @@ export class CodeStater {
   experiencePerDay: { date: string, exp: number }[] = [];
 
   static fromJSON(json, moreData) {
-    let codeStater = new CodeStater();
+    const codeStater = new CodeStater();
 
     codeStater.user = json.user;
     codeStater.name = moreData.name;
@@ -38,7 +38,7 @@ export class CodeStater {
     codeStater.totalExperience = json.total_xp;
     codeStater.newExperience = json.new_xp ? json.new_xp : '0';
 
-    let dates = Object.keys(json.dates);
+    const dates = Object.keys(json.dates);
 
     if (dates.length) {
       for (const date of dates) {
@@ -46,15 +46,17 @@ export class CodeStater {
       }
     }
 
-    let languages = Object.keys(json.languages);
+    const languages = Object.keys(json.languages);
 
     if (languages.length) {
       for (const languageID of languages) {
-        let language = json.languages[languageID];
+        const language = json.languages[languageID];
         language.name = languageID;
 
         codeStater.languages.push(Language.fromJSON(language));
       }
+
+      codeStater.languages.sort((a, b) => a.totalExperience >= b.totalExperience ? -1 : 1);
     }
 
     return codeStater;

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CodeStatersService} from '../../../helpers/code-staters.service';
-import {CodeStater} from '../../../model/CodeStater';
+import {CodeStater, Language} from '../../../model/CodeStater';
 import codeStatersJSON from '../../../../assets/code-staters-data';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {BaseComponent} from '../../../helpers/base-component/base-service';
@@ -42,5 +42,9 @@ export class CodeStatersComponent extends BaseComponent{
     } else {
       this.expandedCodeStaters.push(codeStater);
     }
+  }
+
+  getPercentage(language: Language, codeStater: CodeStater) {
+    return ((language.totalExperience / codeStater.totalExperience)  * 100).toFixed(2);
   }
 }

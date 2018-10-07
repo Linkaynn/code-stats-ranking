@@ -34,5 +34,14 @@ td {
   cursor: pointer;
 }
 
-.table-container {
+.language-ranking-item {
+  padding: 2px 5px;
+  border-radius: 10px;
+  background-color: $violet-light;
+}
+
+.codestats-link {
+  padding-top: 9px;
+  font-size: 10px;
+  padding-left: 2px;
 }

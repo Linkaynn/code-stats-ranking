@@ -17,7 +17,7 @@ import {
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
-  MatTableModule
+  MatTableModule, MatTooltipModule
 } from '@angular/material';
 import {TopNavComponent} from './components/shared/top-nav/top-nav.component';
 import {CodeStatersService} from './helpers/code-staters.service';
@@ -40,7 +40,8 @@ import {ComponentsCore} from './helpers/base-component/service-core-provider';
     MatExpansionModule,
     MatButtonModule,
     MatTableModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   providers: [
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}},

@@ -26,11 +26,15 @@
             <div class="w-100 mt-4 mb-4">
               <div class="row">
                 <div *ngIf="codeStater.name" class="mb-2 col-12">
-                  <h5 class="pb-0 mb-0 bold">
-                    <a *ngIf="codeStater.personalPage" href="{{codeStater.personalPage}}" target="_blank" class="black">{{codeStater.name}}</a>
-                    <span *ngIf="!codeStater.personalPage">{{codeStater.name}}</span>
-                  </h5>
-                  <a *ngIf="codeStater.email" href="mailto:{{codeStater.email}}" target="_blank" class="brand-color-light">{{codeStater.email}}</a>
+                  <div class="d-inline-flex">
+                    <h5 class="pb-0 mb-0 bold">
+                      <a *ngIf="codeStater.personalPage" href="{{codeStater.personalPage}}" target="_blank" class="black">{{codeStater.name}}</a>
+                      <span *ngIf="!codeStater.personalPage">{{codeStater.name}}</span>
+                    </h5>
+                    <a class="codestats-link" href="https://codestats.net/users/{{codeStater.user}}" target="_blank"><span>C:S</span></a>
+                  </div>
+
+                  <a *ngIf="codeStater.email" href="mailto:{{codeStater.email}}" target="_blank" class="brand-color-light d-block">{{codeStater.email}}</a>
                 </div>
                 <div *ngIf="codeStater.description" class="col-12">
                   <span>{{codeStater.description}}</span>
@@ -42,7 +46,12 @@
                 </div>
                 <div class="col-6">
                   <p class="pb-0 mb-0 bold orange-dark">Best language</p>
-                  <span>{{codeStater.bestLanguage().name}} is the {{((codeStater.bestLanguage().totalExperience / codeStater.totalExperience)  * 100).toFixed(2)}}% of him/her experience</span>
+                  <span>{{codeStater.bestLanguage().name}} is the {{getPercentage(codeStater.bestLanguage(), codeStater)}}% of him/her experience</span>
+                </div>
+                <div class="col-12">
+                  <p class="pb-0 mb-1 bold orange-dark">Languages ordered by knowledge</p>
+                  <span class="mr-2" *ngFor="let language of codeStater.languages; index as i"><span class="language-ranking-item white bold" matTooltip="{{i + 1}}º place. ({{language.totalExperience}} exp.)
+                  ({{getPercentage(language, codeStater)}}%)">{{language.name}}</span></span>
                 </div>
               </div>
             </div>
