@@ -10,6 +10,10 @@ export default {
     {
       'username': 'skurt23',
       'name': 'Alejandro Moreno Alberto'
+    },
+    {
+      'username': 'BartLoch',
+      'name': 'Sebastian Friedl'
     }
   ]
 };
