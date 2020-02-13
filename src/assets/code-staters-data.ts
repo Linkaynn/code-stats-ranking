@@ -14,6 +14,12 @@ export default {
     {
       'username': 'BartLoch',
       'name': 'Sebastian Friedl'
+    },
+    {
+      'username': 'Nicd',
+      'name': 'Mikko Ahlroth',
+      'personal_page': 'https://blog.nytsoi.net/',
+      'description': 'Administrator of Code::Stats, double stack programmer from Finland.'
     }
   ]
 };
