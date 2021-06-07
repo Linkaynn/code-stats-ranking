@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve --watch",
     "build": "ng build --prod --base-href 'https://www.jeseromero.com/code-stats-ranking/'",
-    "deploy": "npm run build && npx ngh --dir=dist/code-stats-ranking -S",
+    "deploy": "npx ngh --dir=dist/code-stats-ranking -S",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
