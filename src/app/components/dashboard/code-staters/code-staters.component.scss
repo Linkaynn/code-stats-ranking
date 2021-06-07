@@ -1,5 +1,5 @@
-@import "../../../../sass/vendor/variables";
-@import "../../../../sass/vendor/util";
+@import '../../../../sass/vendor/variables';
+@import '../../../../sass/vendor/util';
 
 table {
   width: 100%;
@@ -26,7 +26,12 @@ tr.example-codestater-row:not(.example-expanded-row):active {
   display: flex;
 }
 
-mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+mat-footer-row,
+mat-header-row,
+mat-row,
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
   border-bottom-color: $brand-color;
 }
 

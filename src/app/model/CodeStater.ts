@@ -15,7 +15,6 @@ export class Language {
 }
 
 export class CodeStater {
-
   user: string;
   name: string;
   email: string;
@@ -24,7 +23,7 @@ export class CodeStater {
   newExperience: number = 0;
   totalExperience: number = 0;
   languages: Language[] = [];
-  experiencePerDay: { date: string, exp: number }[] = [];
+  experiencePerDay: { date: string; exp: number }[] = [];
 
   static fromJSON(json, moreData) {
     const codeStater = new CodeStater();
@@ -42,7 +41,7 @@ export class CodeStater {
 
     if (dates.length) {
       for (const date of dates) {
-        codeStater.experiencePerDay.push({date: date, exp: json.dates[date]});
+        codeStater.experiencePerDay.push({ date: date, exp: json.dates[date] });
       }
     }
 
@@ -56,7 +55,9 @@ export class CodeStater {
         codeStater.languages.push(Language.fromJSON(language));
       }
 
-      codeStater.languages.sort((a, b) => a.totalExperience >= b.totalExperience ? -1 : 1);
+      codeStater.languages.sort((a, b) =>
+        a.totalExperience >= b.totalExperience ? -1 : 1
+      );
     }
 
     return codeStater;
