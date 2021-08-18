@@ -20,6 +20,11 @@ export default {
       'name': 'Mikko Ahlroth',
       'personal_page': 'https://blog.nytsoi.net/',
       'description': 'Administrator of Code::Stats, double stack programmer from Finland.'
+    },
+    {
+      'username': 'bjkio',
+      'name': 'Ju Lian',
+      'personal_page': 'https://bmlr.me.uk/'
     }
   ]
 };
