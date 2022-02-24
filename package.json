@@ -1,6 +1,6 @@
 {
   "name": "code-stats-ranking",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Jese Romero Arbelo",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "engines": {
+    "yarn": "1.22.17",
+    "node": "~14"
+  },
   "dependencies": {
     "@angular/animations": "^6.1.9",
     "@angular/cdk": "^6.4.7",
