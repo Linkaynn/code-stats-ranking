@@ -1,14 +1,20 @@
-# Code:Stats Ranking
-#### A collaborative ranking [Code:Stats](https://codestats.net/) users
+# [Code:Stats](https://codestats.net/) Ranking
 
-Here is the list: https://www.jeseromero.com/code-stats-ranking/dashboard/code-staters
+URL: https://www.jeseromero.com/code-stats-ranking/dashboard/code-staters
 
-If you want to add yourself to the list, just only add your username of Code:Stats to ``assets/code-staters-data.ts`` and make a pull request.
+## How can I add my self?
 
-After that travis will be deploy your data in the Github Pages and you will see your position in the ranking :)
+As you can see, _this project is not maintained anymore_, but, if you want to see yourself, don't hesitate and follow this steps to add your stats:
+
+1. Fork this repo
+2. Add your username of Code:Stats to ``assets/code-staters-data.ts``
+3. Send the pull request and that's it ✨
+
+Travis will deploy to Github Pages and you will see your position in the ranking very soon :)
 
 ## To-do
-* More *ad-hoc* statistics in the table and it expansion.
+
+* More *ad-hoc* statistics in the table.
 * Some beautiful graphics.
 * ~~Add link to personal pages and real names to ``assets/code-staters-data.ts`` in order to credit the user.~~
 * ~~Maybe add a description to every one in ``assets/code-staters-data.ts`` to make a personal description.~~ 
