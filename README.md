@@ -10,7 +10,7 @@ As you can see, _this project is not maintained anymore_, but, if you want to se
 2. Add your username of Code:Stats to ``assets/code-staters-data.ts``
 3. Send the pull request and that's it ✨
 
-Travis will deploy to Github Pages and you will see your position in the ranking very soon :)
+Github actions will deploy to Github Pages and you will see your position in the ranking very soon :)
 
 ## To-do
 
