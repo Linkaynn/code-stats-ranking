@@ -25,6 +25,11 @@ export default {
       'username': 'bjkio',
       'name': 'Ju Lian',
       'personal_page': 'https://bmlr.me.uk/'
+    },
+    {
+      'username': 'cositech',
+      'name': 'Felix Cos',
+      'personal_page': 'https://github.com/cositech/'
     }
   ]
 };
